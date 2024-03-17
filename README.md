@@ -38,6 +38,14 @@ As such they will run on any platform supporting this industry-standard, publicl
 
 See each project for details on its runtime requirements. Most often, single and stacked XSLTs can be executed using simple calls from a command prompt, or easily configured within tools. Pipelines may be implemented in XSLT 3.0, or may be supported via [XProc](https://xproc.org/), or both. Each folder should give further details in its README documentation.
 
+Additionally, some of the projects contained in this repository will depend on the core OSCAL repository sources. These projects utilize the provided submodule located at `/common/OSCAL/`, though mechanisms may be provided to run the applications with sources located out of tree. Consult the project READMEs for more details.
+
+To utilize the OSCAL submodule on an existing copy of this git repository, run the following command:
+
+```sh
+git submodule update --init --recursive
+```
+
 ## Contact information
 
 Principal software engineers responsible for these projects are
