@@ -10,9 +10,13 @@
    <!-- &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& -->
    <!-- Ports -->
 
+   <!--
+      If preferred, can specify the OSCAL source metaschemas without the use of the OSCAL submodule,
+      e.g. https://raw.githubusercontent.com/usnistgov/OSCAL/main/src/metaschema/oscal_catalog_metaschema.xml
+   -->
    <p:input port="METASCHEMA" primary="true">
       <p:document
-         href="https://raw.githubusercontent.com/usnistgov/OSCAL/main/src/metaschema/oscal_catalog_metaschema.xml"/>
+         href="../../common/OSCAL/src/metaschema/oscal_catalog_metaschema.xml"/>
    </p:input>
 
    <p:input port="parameters" kind="parameter"/>
@@ -33,7 +37,11 @@
    <!-- &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& -->
    <!-- Import (subpipeline) -->
 
-   <p:import href="https://raw.githubusercontent.com/usnistgov/metaschema-xslt/develop/src/schema-gen/METASCHEMA-INSPECTOR-XSLT.xpl"/>
+   <!--
+      If preferred, can specify the Metaschema XSLT pipelinewithout the use of the OSCAL submodule,
+      e.g. https://raw.githubusercontent.com/usnistgov/metaschema-xslt/develop/src/schema-gen/METASCHEMA-INSPECTOR-XSLT.xpl
+   -->
+   <p:import href="../../common/OSCAL/build/metaschema-xslt/src/schema-gen/METASCHEMA-INSPECTOR-XSLT.xpl"/>
 
    <!-- &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& -->
    <!-- Pipeline -->

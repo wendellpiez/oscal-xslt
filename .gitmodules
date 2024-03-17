@@ -1,0 +1,3 @@
+[submodule "common/OSCAL"]
+	path = common/OSCAL
+	url = https://github.com/usnistgov/OSCAL.git
