@@ -1003,7 +1003,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>../../OSCAL/src/release/m3/FedRAMP-SSP-OSCAL-Template.xml</String>
+                                    <String>common/OSCAL/src/release/m3/FedRAMP-SSP-OSCAL-Template.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
