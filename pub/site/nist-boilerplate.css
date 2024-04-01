@@ -22,7 +22,7 @@ main > *:first-child { margin-top: 0em }
 .boxed { width: fit-content; padding: 0.4em;
     margin: 0.25em 0em}
 
-details.boxed[open] { outline: thin dotted black }
+details.boxed[open] { outline: thin dotted black; background-color: white; }
 
 details.boxed > *:last-child { margin-bottom: 0em }
 
@@ -37,3 +37,6 @@ details#sec-notice { margin: 0em; padding: 0.2em;
 
 #sec-notice a { color: inherit; text-decoration: inherit }
 #sec-notice a:hover { text-decoration: underline; }
+
+i i { font-style: normal; font-size: 90% }
+i i i { font-style: italic; font-weight: bold }

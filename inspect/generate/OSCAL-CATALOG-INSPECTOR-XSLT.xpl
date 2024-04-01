@@ -33,6 +33,7 @@
    <!-- &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& -->
    <!-- Import (subpipeline) -->
 
+   <!-- Here is the dependency on the metaschema-xslt submodule -->
    <p:import href="https://raw.githubusercontent.com/usnistgov/metaschema-xslt/develop/src/schema-gen/METASCHEMA-INSPECTOR-XSLT.xpl"/>
 
    <!-- &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& &&& -->

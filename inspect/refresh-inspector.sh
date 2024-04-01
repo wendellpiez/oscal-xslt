@@ -23,13 +23,14 @@ if ! [ -x "$(command -v mvn)" ]; then
   exit 1
 fi
 
-
+# currently $MODULE is a no-op
 [[ -z "${1-}" ]] && { echo "Error: OSCAL module not specified with SCHEMA_CODE ('catalog')"; usage; exit 1; }
-METASCHEMA_SOURCE=$1
+MODULE=$1
 
 ADDITIONAL_ARGS=$(shift 1; echo ${*// /\\ })
 
-# The XProc is hard-wired to save its InspectorXSLT results in 
+# In a refactored version $MODULE is parameterized
+# This XProc is hard-wired including writing its results to file (Inspector XSLT outputs_ 
 PIPELINE="${SCRIPT_DIR}/generate/OSCAL-CATALOG-INSPECTOR-XSLT.xpl"
 
 CALABASH_ARGS="$ADDITIONAL_ARGS \"$PIPELINE\""
@@ -39,7 +40,7 @@ if [ "$1" = 'catalog' ]
 
 then
 
-  echo Refreshing oscal-catalog_inspector.xsl ...
+  echo Refreshing oscal-$MODULE_inspector.xsl ...
   invoke_calabash "${CALABASH_ARGS}"
   ECHO ... Done
   

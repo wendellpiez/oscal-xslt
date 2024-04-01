@@ -39,15 +39,48 @@ Download the library by running [the script](lib/download-saxonjs.sh) given in t
 
 For SaxonJS and Saxon in the browser see https://www.saxonica.com/saxon-js/documentation2/index.html.
 
+SaxonJS version 2.6 was released in late 2023.
+
 ### Regenerating SEF files
 
-When an XSLT is updated or improved, the SEF compiled version must be refreshed.
+When an XSLT is updated or improved, the SEF compiled version must be refreshed. This file packages the core logic of the transformation to be executed by the library as a JSON "execution plan". Regenerate the SEF file (typically `*.sef.json`) if/as the XSLT sources improve over time, or for new and updated Metaschema sources and/or other sources, as applicable.
 
 Compiling the XSLT into SEF requires Saxon, either licensed SaxonJ (Java, versions PE or EE) or SaxonJS running under NodeJS. SaxonJS with its `xslt3` command line utility is used here for consistency but license-holders of Saxon should be able to use any version since version 10 (see their docs).
 
-For NodeJS, install [SaxonJS](https://www.npmjs.com/package/saxon-js) and [xslt3](https://www.npmjs.com/package/xslt3) via NPM.
+For NodeJS, install [xslt3](https://www.npmjs.com/package/xslt3) via NPM, which brings  [SaxonJS](https://www.npmjs.com/package/saxon-js).
 
-Scripts or documents per project will commonly capture command-line configurations and options. So for example see the script `InspectorXSLT/compile-inspector.sh`, which calls SaxonJS under Node JS to compile an XSLT and produce SEF for it.
+Scripts and documentation per project will commonly capture command-line configurations and options. So for example see the script `InspectorXSLT/compile-inspector.sh`, which calls SaxonJS under Node JS to compile an XSLT and produce SEF for it, for this web application.
+
+#### Checking and using `xslt3` Node JS utility
+
+[`xslt3`](https://www.npmjs.com/package/xslt3) is a command-line application that uses `saxon-js` under Node JS. It can be used as an alternative to licensed-Saxon for generating SEF files from updated sources.
+
+After having installed Node JS and `xslt3` (with `saxon-js`), to test to see if `xslt3` functions correctly, try a query like this -
+
+
+```
+xslt3 -xp:"current-date() => format-date('[D] [MNn] [Y]')" && echo
+```
+
+or to find its version --
+
+```
+xslt3 -t
+```
+
+or to see its command syntax 
+
+```
+xslt3 -?
+```
+
+or to get an explanation of the `-xp` flag:
+
+```
+xslt3 -xp:?
+```
+
+For more see http://www.saxonica.com/saxon-js/documentation/index.html#!nodejs/command-line.
 
 ### Ideas
 

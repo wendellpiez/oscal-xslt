@@ -67,28 +67,28 @@ span.linktext { font-weight: bold }
   font-family: Consolas, monospace; font-weight: 300 }
   
 </style>
-        <script type="text/javascript" src="../lib/Saxon-JS-2.2/SaxonJS2.js">
-        </script>
-        <script xml:space="preserve">
+<script type="text/javascript" src="../lib/Saxon-JS-2.2/SaxonJS2.js">
+</script>
+<script xml:space="preserve">
 
 function loadOSCAL(fileSet) {
-  for (const eachFile of fileSet) {
-    let frdr = new FileReader();
-    frdr.onload = function () {
-      SaxonJS.transform({
-        sourceText: frdr.result,
-        stylesheetLocation: "componentdef.sef.json",
-        initialTemplate: "componentdef-bento",
-        stylesheetParams: {
-          "fileName": eachFile.name
-        }
-      },"async")
-    }
-    frdr.readAsText(eachFile);
-  }
+for (const eachFile of fileSet) {
+let frdr = new FileReader();
+frdr.onload = function () {
+SaxonJS.transform({
+sourceText: frdr.result,
+stylesheetLocation: "componentdef.sef.json",
+initialTemplate: "componentdef-bento",
+stylesheetParams: {
+  "fileName": eachFile.name
+}
+},"async")
+}
+frdr.readAsText(eachFile);
+}
 }
 
-        </script>
+</script>
 
     </head>
     <body>

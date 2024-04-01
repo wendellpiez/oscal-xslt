@@ -14,7 +14,35 @@
     <script async="async" type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NIST%26subagency=github%26pua=UA-66610693-1%26yt=true%26exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c">
 </script>
     <script type="text/javascript" src="https://pages.nist.gov/leaveNotice/js/jquery.leaveNotice-nist.min.js"></script>
+
+
     <link rel="stylesheet" type="text/css" href="https://pages.nist.gov/leaveNotice/css/jquery.leaveNotice.css" />
+    
+    <script type="text/javascript" src="../lib/Saxon-JS-2.2/SaxonJS2.js">
+    </script>
+    <script xml:space="preserve">
+
+/* think about updating this js to something neater */
+/* wrap in try/catch to defend against not-wf input? */
+function catalogValidate(fileSet) {
+  for (const eachFile of fileSet) {
+    let aFileReader = new FileReader();
+    aFileReader.onload = function () {
+      SaxonJS.transform( {
+        sourceText: aFileReader.result,
+        stylesheetLocation: "catalog-validate.sef.json",
+        initialTemplate: "paint-results",
+        stylesheetParams: {
+          "fileName": eachFile.name
+        }
+      }, "async")
+    }
+    aFileReader.readAsText(eachFile);
+  }
+}
+
+    </script>
+
   </head>
   <!-- templating help at https://pages.nist.gov/nist-header-footer/ -->
   <body class="draft">
@@ -27,13 +55,20 @@
     <h1>OSCAL Catalog Inspector XSLT</h1>
     <p>Testing and using OSCAL, the <b><a href="https://pages.nist.gov/OSCAL/">Open Security Controls Assessment Language</a></b>.</p>
     <p>This page provides a validation service. Load your OSCAL catalog and the page shows whether and where it is invalid according to the rules of the <a href="https://pages.nist.gov/OSCAL/resources/concepts/layer/control/catalog/">OSCAL catalog model</a>.</p>
-    <p>Processing is entirely on the client system and entails no data transfer. XSLT logic is maintained in the <a class="external" href="https://github.com/usnistgov/oscal-xslt">OSCAL XSLT</a> repository, from which it can also be acquired and adapted.</p>
+    <p>Processing is entirely on the client system and entails no data transfer. XSLT logic is maintained in the <a class="external" href="https://github.com/usnistgov/oscal-xslt">OSCAL XSLT</a> repository, where it can be inspected and studied.</p>
+
+    <p>Load your OSCAL catalog XML file for validation... <input
+      type="file" accept=".xml,text/xml"
+      id="loadfileInput" name="loadfileInput" title="Drop XML"
+      onchange="catalogValidate(this.files)" /></p>
+
     <details class="boxed">
       <summary class="aboutbox">About the application</summary>
       <p>The <a href="https://pages.nist.gov/metaschema/">Metaschema Information Modeling Framework</a> used by OSCAL to support its data modeling provides it with a means of defining its rules abstractly such that they can be checked and enforced by an automated process, independently and agnostically with respect to the data format(s) supported by that process, while the data format is one of XML, JSON or YAML. As an XML-based technology, <a href="https://www.w3.org/TR/xslt-30/">XSLT (XSL Transformations)</a> now in version 3.0 is a capable language for a robust and conformant implementation of Metaschema, starting with its XML-facing capabilities.</p>
-      <p>This page applies the rules defined in the <a href="https://github.com/usnistgov/OSCAL/blob/main/src/metaschema/oscal_catalog_metaschema.xml">OSCAL Catalog Metaschema</a> to XML instances, to determine their conformance to these rules, and reporting discrepancies. It does this independently of other schema technologies including the published OSCAL schemas (XSD and JSON Schema), reporting the same findings for the same inputs. Over controlled testing input, it thus offers cross-checking of technologies being examined, i.e. relevant findings for conformance testing.</p>
-      <p>As a demonstration and proof of concept, this application aims to go beyond showing the delivery of the <i>validation</i> capability as defined by Metaschema. Additionally, it seeks to do so in a testable, traceable and verifiable way. Accordingly it is backed by <a href="../../inspect/testing">conformance testing</a> as well as testing of its functionality and performance. In doing so, it hopes to provide <q>second implementation</q> confirmation of Metaschema semantics, showing their viability.</p>
-      <p>The validation capabilities of Metaschema include not only modeling constraints (such as names and permissible locations of elements to be recognized), but also <i>arbitrary, assertion-based (or <i style="font-style:normal">query-based</i>) constraints</i> over the data set itself, not only its tagging. These applications can range widely from relatively relaxed and permissive definitions to very tight ones, in which not only names and places but also tagging usage, cross-linking and "informational integrity" can be defined, cross-checked and enforced when needed. OSCAL defines a number of such rules with varying complexity, making it a good real-world use case for Metaschema.</p>
+      <p>This page applies the rules defined in the <a href="https://github.com/usnistgov/OSCAL/blob/main/src/metaschema/oscal_catalog_metaschema.xml">OSCAL Catalog Metaschema</a> to an XML instance provided by the user, to determine its conformance to these rules, and reporting discrepancies. It does this independently of other schema technologies including the published OSCAL schemas (XSD and JSON Schema), reporting the same findings for the same inputs. Over controlled inputs, it thus offers cross-checking of technologies being examined, i.e. relevant findings both for conformance testing and for OSCAL validation in the abstract.</p>
+      <p>As a demonstration and proof of concept, this application aims to go beyond showing the delivery of the <i>validation</i> capability as defined by Metaschema, seeking to do so in a testable, traceable and verifiable way. Accordingly it is backed by its own <a href="../../inspect/testing">conformance testing</a> as well as testing of its functionality and performance. In doing so, it hopes to provide confirmation of Metaschema semantics, showing the viability of the approach.</p>
+      <p>The validation capabilities of Metaschema include not only modeling constraints (such as names and permissible locations of elements to be recognized), but also <i>arbitrary, assertion-based (or <i >query-based</i>) constraints</i> over the data set itself, and not only its tagging. Applications defined by semantics supported by such constraints can range widely from relatively relaxed and permissive <q>tag sets</q> to fully detailed data definitions, in which not only names and object arrangement but also inline data and object types, tagging usage, cross-linking and "informational integrity" can be defined, cross-checked and enforced where needed.</p>
+      <p>As OSCAL defines a number of such rules with varying complexity, it makes a good real-world use case for Metaschema.</p>
       <p>We welcome ideas, constructive criticism including bug reports with samples, proposals, patches and encouragement. One available channel for feedback is our <a class="external" href="https://github.com/usnistgov/oscal-xslt/issues">project repository issues board</a>.</p>
     </details>
 

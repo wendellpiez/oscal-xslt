@@ -27,6 +27,17 @@ CALABASH_ARGS="-oINSPECTOR-XSLT=/dev/null $ADDITIONAL_ARGS \"${XPROC_FILE}\""
 
 # echo "${CALABASH_ARGS}"
 
-invoke_calabash "${CALABASH_ARGS}"
 
-echo Computer Model Inspector XSLT produced and run - without apparent error
+
+## show usage if a first argument is '-h', expanding $1 to '' if not set
+if [ "${1:-}" = '-h' ] || [ "${1:-}" = '--help' ];
+
+then
+
+  usage
+
+else
+
+  invoke_calabash "${CALABASH_ARGS}"
+
+  echo Computer Model Inspector XSLT produced and run - without apparent error

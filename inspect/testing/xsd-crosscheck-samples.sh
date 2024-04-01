@@ -27,9 +27,6 @@ CALABASH_ARGS="-osurvey=/dev/null -osummary=/dev/null $ADDITIONAL_ARGS \"${XPROC
 
 # echo "${CALABASH_ARGS}"
 
-
-
-
 ## show usage if a first argument is '-h', expanding $1 to '' if not set
 if [ "${1:-}" = '-h' ] || [ "${1:-}" = '--help' ];
 
