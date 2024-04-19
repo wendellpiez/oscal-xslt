@@ -1,0 +1,10 @@
+# IDE configuration files
+*.xpr
+
+# other generated files
+**/*xspec/*-result.html
+**/*tests/*-result.html
+**/*xspec*-result.html
+
+# test outputs
+src/**/test_output/
