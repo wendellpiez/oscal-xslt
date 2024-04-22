@@ -1,22 +1,29 @@
 # Validation Field Testing
 
-  
-
 Determining conformance of OSCAL schemas to their Metaschema definitions.
 
 More generally this means determining conformance of any generated or acquired schemas to Metaschema semantics.
-
 
 
 ## tl/dr
 
 ### Acquire Morgana XProc III engine
 
-Users of `bash` can run the script: `acquire-morgana.sh`.
+Install `bash` if you don't have it. Under Windows, a generic WSL should work or a Windows `bash` application such as Git Bash.
+
+**Help needed** porting `bash` scripts into `*.bat` files. Some capabilities ([see Drag-and-drop runtime](#drag-and-drop-runtime) below) could be extended on both \*-nix-based and Windows platforms.
+
+From a `bash` prompt, run the script
+
+```
+> acquire-morgana.sh
+```
 
 It downloads Morgana into `lib` and unzips it.
 
-For systems with no `bash` shell skip to 'Installing Morgana' below.
+We ask you to do this for us (rather than copying the distribution into the repository) because we wish to stress the contribution of the XProc 3 processor (Morgana XProc III) along with its own dependency stack including the **Saxon** processor.
+
+Details on what the `bash` does are given in [Installing Morgana](#installing-morgana) below.
 
 ### Test run Morgana
 
@@ -35,6 +42,7 @@ On Linux
 ```
 > ./run-morgana.sh MORGANA-SMOKETEST.xp3
 ```
+Either script should show runtime information, followed by a pretty XML file.
 
 > COMEBACKTO XXX write / configure run-morgana.sh
 
@@ -54,13 +62,17 @@ The naming convention `ALLCAPS.xp3` is used in this project for XProc 3 pipeline
 ### Run the XSD field tests
 
 
-Use the script
+Use the pipeline, Luke!
 
 ### Run the JSON validator field tests
 
 ### Inspect and assess the test samples
 
 ### Add to the test samples
+
+#### Converting valid samples
+
+#### Reproducing invalid samples
 
 ## What are we testing?
 
