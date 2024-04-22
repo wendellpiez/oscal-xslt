@@ -34,7 +34,7 @@ else
     echo "SaxonHE is available with ${morgana}"
 fi
 
-echo "Morgana is available - try running `run-morgana` next --"
+echo "Morgana is available - next, try executing a pipeline with `xproc3.sh` --"
 
 popd > /dev/null
 

@@ -9,9 +9,9 @@ More generally this means determining conformance of any generated or acquired s
 
 ### Acquire Morgana XProc III engine
 
-Install `bash` if you don't have it. Under Windows, a generic WSL should work or a Windows `bash` application such as Git Bash.
+This is easiest with `bash`. Under Windows, a generic WSL should work (Ubuntu has been tested) or a Windows `bash` application such as Git Bash.
 
-**Help needed** porting `bash` scripts into `*.bat` files. Some capabilities ([see Drag-and-drop runtime](#drag-and-drop-runtime) below) could be extended on both \*-nix-based and Windows platforms.
+Currently this is the only bash dependency; everything else requires only Java plus the downloaded software.
 
 From a `bash` prompt, run the script
 
@@ -19,11 +19,11 @@ From a `bash` prompt, run the script
 > acquire-morgana.sh
 ```
 
-It downloads Morgana into `lib` and unzips it.
+It downloads Morgana and Saxon into `lib` and unzips them.
 
 We ask you to do this for us (rather than copying the distribution into the repository) because we wish to stress the contribution of the XProc 3 processor (Morgana XProc III) along with its own dependency stack including the **Saxon** processor.
 
-Details on what the `bash` does are given in [Installing Morgana](#installing-morgana) below.
+Details on script operation are given in [Installing Morgana](#installing-morgana) below.
 
 ### Test run Morgana
 
@@ -32,7 +32,7 @@ Smoke test your Morgana installation by running a test pipeline:
 On Windows
 
 ```
-> .\run-morgana MORGANA-SMOKETEST.xp3
+> .\xproc3 XPROC3-SMOKETEST.xp3
 ```
 
 invokes the script `run-morgana.bat`
@@ -40,11 +40,10 @@ invokes the script `run-morgana.bat`
 On Linux
 
 ```
-> ./run-morgana.sh MORGANA-SMOKETEST.xp3
+> ./xproc3.sh XPROC3-SMOKETEST.xp3
 ```
-Either script should show runtime information, followed by a pretty XML file.
 
-> COMEBACKTO XXX write / configure run-morgana.sh
+Either script should run the Morgana XProc 3 engine to produce a pretty XML file.
 
 If a script errors, check its paths and settings (are they up to date with what you installed?) before retracing your steps.
 
@@ -52,15 +51,14 @@ If a script errors, check its paths and settings (are they up to date with what 
 
 Those who prefer mouse swipes to command lines can run an XProc 3 pipeline using the Windows GUI:
 
-- Create a desktop shortcut to `run-morgana.bat`
+- Create a desktop shortcut to `xproc3.bat`
 - Drag any pipeline `ALLCAPS.xp3` onto the icon to run it.
 
-The naming convention `ALLCAPS.xp3` is used in this project for XProc 3 pipeline files that are designed to run standalone in place, with no external ports or special runtime configuration. (These may work by calling other XProc files that are not self-contained.) Since invoking these is simple it is also easy to instrument.
+The naming convention `ALLCAPS.xp3` is used in this project for XProc 3 pipeline files that are designed to run standalone in place, with no external ports or special runtime configuration. (These may work by calling other XProc files that are not so insulated.) Since invoking these is simple it is also easy to instrument.
 
-> COMEBACKTO XXX test this elsewhere
+TODO: see to it that this works also with `xproc3.sh` on GUIs with `bash` support.
 
 ### Run the XSD field tests
-
 
 Use the pipeline, Luke!
 
