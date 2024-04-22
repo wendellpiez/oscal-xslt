@@ -11,7 +11,8 @@
    
    <!-- Inputs are hard-wired for now -->
    <p:input port="xml-samples" sequence="true">
-      <!-- for the XML, invalid documents are marked with a PI <?ERROR ?> to show an expectation of INVALID -->
+      <!-- The processor expects files to be valid or invalid according to logic given in the filter stylesheet src/common/validation-screener.xsl -->
+      
       <p:document href="reference-sets/catalog-model/xml/fully-valid/minimal.xml"/>
       <p:document href="reference-sets/catalog-model/xml/fully-valid/okay-catalog.xml"/>
       <p:document href="reference-sets/catalog-model/xml/fully-valid/some-backmatter.xml"/>
@@ -22,6 +23,11 @@
    </p:input>
    
    <p:output port="result"  serialization="map{'indent' : true()}"/>
+      
+<!--    
+   
+   GOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGOGO
+   -->
       
    <!--<p:variable name="base" select="base-uri(/*)"/>-->
 
@@ -59,7 +65,7 @@
    
    <p:xslt name="plaintext">
       <!-- emits a text brick, no elements -->
-      <p:with-input port="stylesheet" href="src/JSONSchema_v7/summary-plaintext.xsl"/>
+      <p:with-input port="stylesheet" href="src/common/summary-plaintext.xsl"/>
    </p:xslt>
    
    <p:cast-content-type content-type="text/plain"/>

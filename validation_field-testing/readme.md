@@ -51,24 +51,47 @@ If a script errors, check its paths and settings (are they up to date with what 
 
 Those who prefer mouse swipes to command lines can run an XProc 3 pipeline using the Windows GUI:
 
-- Create a desktop shortcut to `xproc3.bat`
-- Drag any pipeline `ALLCAPS.xp3` onto the icon to run it.
+- Use the file explorer to display an icon for your files including `xproc3.bat` (such as with View icons or View Tiles)
+- Drag an icon for any pipeline `ALLCAPS.xp3` onto the `xproc3.bat` icon to run the pipeline.
+- You can create a shortcut to the batch file on the Desktop or elsewhere, and use it the same way
 
 The naming convention `ALLCAPS.xp3` is used in this project for XProc 3 pipeline files that are designed to run standalone in place, with no external ports or special runtime configuration. (These may work by calling other XProc files that are not so insulated.) Since invoking these is simple it is also easy to instrument.
 
 TODO: see to it that this works also with `xproc3.sh` on GUIs with `bash` support.
 
+### Download OSCAL resources
+
+OSCAL catalog converter XSLTs and schemas can be copied onto the local system for secure use by running the pipeline `GRAB-OSCAL.xp3`.
+
+It places these resources in folders inside `lib`. We leave it to you to run these to ensure things are kept up to date and aligned with expectations as to versions, etc.
+
 ### Run the XSD field tests
 
-Use the pipeline, Luke!
+Use the pipeline, Luke! The pipeline `PROVE-XSD-VALIDATIONS.xp3` runs an XSD field test on each of the documents named in the pipeline.
 
 ### Run the JSON validator field tests
 
+ The pipeline `PROVE-JSON-VALIDATIONS.xp3` runs a JSON Schema field test on each of the documents named in it.
+
 ### Inspect and assess the test samples
+
+Test samples are all stored in the folder `reference-sets/`.
+
+Each test set is kept separately; within each test set further discriminations can be made.
+
+Note that their placement in the reference sets is used as an indicator to the validation logic to expect whether a file should be found valid or invalid.
+
+The XSLT `src/common/validation-screener.xsl` has a function with this logic.
+
+TODO: XSpec the core bits of logic here to externalize things a bit better.
 
 ### Add to the test samples
 
 #### Converting valid samples
+
+The XProc pipeline `CONVERT-XML-REFERENCE-SET.xp3` can be used to convert all XML files named in the pipeline into JSON equivalents.
+
+Currently the assumption is that these are always VALID OSCAL XML CATALOG instances. Other types of files require other converters.
 
 #### Reproducing invalid samples
 
@@ -80,8 +103,8 @@ Three different outputs of a schema validation process might be considered:
 
 - Validity state as an abstraction - typically a Boolean value ('valid' or 'not valid')
 - Validation messages - all messages or any 'validation' messages delivered by a processor
--   typically excluding info level messages
--   typically including 'error' and 'warning' level messages
+  -   typically excluding info level messages
+  -   typically including 'error' and 'warning' level messages
 - Post-validation document, as amended
   - In XSD this would be a PSVI
 
@@ -98,13 +121,15 @@ Accordingly we start with (at least) three categories:
 - `disordered` - violates a metaschema-defined constraint (not detectable by XSD or JSON Schema)
 - (possibly for later) `variant` - violates 'WARNING' level constraints only
 
-Running over these sets, a validation engine is expected to be able to discriminate their members correctly, to the extent possible. Without support for Metaschema constraints, an XSD or JSON Schema validator cannot distinguish between 'valid' and 'disordered' - for them, a putative category 'schema-valid' unifies `valid` and `disordered`.
+Running over these sets, a validation engine is expected to be able to discriminate their members correctly, to the extent possible.
+
+Without support for Metaschema constraints, an XSD or JSON Schema validator cannot distinguish between 'valid' and 'disordered' - for them, a putative category 'schema-valid' unifies `valid` and `disordered`.
 
 (A different intersection, namely instances that return no errors on constraints but are invalid structurally, is excluded, since structural validation is a *sine qua non*. Only instances that are not defective can be disordered.)
 
 We have to maintain all categories in both XML and JSON formats, to begin (possibly YAML also, in future).
 
-A small but pervasive problem in JSON Schema modeling provides us an opportunity to use this scaffolding.
+A small but pervasive problem in JSON Schema modeling provides us an opportunity to use this scaffolding (Issue metaschema-xslt #105).
 
 ## Setup and refresh
 
@@ -124,13 +149,9 @@ This can be done by hand on systems with no `bash` shell:
 
 The authors and contributors to Saxon and Morgana starting with Michael Kay (Saxon), Achim Berndzen (Morgana) and Norman Walsh and the XProc community (XProc) are owed acknowledgement for making this possible.
 
-### Refresh schemas and converters
+### Refresh OSCAL schemas and converters
 
-OSCAL catalog schemas (XSD and JSON Schema) should be downloaded into the `lib` directory.
-
-Additionally, converter XSLTs for the verson of OSCAL can be very useful for aligning JSON and XML versions of the samples.
-
-Scripts `refresh-catalog-schemas.sh` and `refresh-catalog-converters.sh` perform these updates from the OSCAL repository.
+As noted, OSCAL catalog converter XSLTs and schemas can be copied onto the local system for secure use by running the pipeline `GRAB-OSCAL.xp3`. Unless you have made adjustments to your pipelines to relax their dependencies, regard this as a prerequisite for running them.
 
 ### Configuration
 
