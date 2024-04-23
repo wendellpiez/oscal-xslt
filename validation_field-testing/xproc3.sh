@@ -14,7 +14,7 @@ Applies Morgana XProc III processor to the designated pipeline, using Saxon for 
 EOF
 }
 
-[[ -z "${1-}" ]] && { echo "The script requires an XProc 3 pipeline - try XPROC3-SMOKETEST.xp3"; usage; exit 1; }
+[[ -z "${1-}" ]] && { echo "The script requires an XProc 3 pipeline - try XPROC3-SMOKETEST.xpl"; usage; exit 1; }
 
 if [ ! -f "${MORGANA}" ]; then
 

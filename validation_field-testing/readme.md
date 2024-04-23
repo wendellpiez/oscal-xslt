@@ -7,6 +7,24 @@ More generally this means determining conformance of any generated or acquired s
 
 ## tl/dr
 
+Windows users should acquire `bash` but also keep reading
+
+1. Run `./acquire-lib.sh` to install Morgana and Saxon
+1. Run `./xproc3.sh GRAB-OSCAL.xpl` to acquire OSCAL resources
+1. To test run validations:
+    - `PROVE-JSON-VALIDATIONS.xpl` and `PROVE-XSD-VALIDATIONS.xpl` prove their respective validation sets against their respective schemas
+    -  Schemas are currently wired into the pipelines - change them there or clone the pipelines for new schemas
+    - XML and JSON reference sets are kept separate - it is your job to keep them as synched as necessary
+    - Expect errors if resources are missing or out of place (run `GRAB-OSCAL.xpl` first).
+
+For use in development
+
+1. CONVERT-XML-REFERENCE-SET.xpl helps convert samples from XML to JSON
+1. XPROC3-SMOKETEST.xpl does nothing but exercise the XSLT engine (to hear it hum)
+1. `help` happens to offer help if you type `xproc3.sh help`
+
+## More detail
+
 ### Acquire Morgana XProc III engine
 
 This is easiest with `bash`. Under Windows, a generic WSL should work (Ubuntu has been tested) or a Windows `bash` application such as Git Bash.
@@ -32,7 +50,7 @@ Smoke test your Morgana installation by running a test pipeline:
 On Windows
 
 ```
-> .\xproc3 XPROC3-SMOKETEST.xp3
+> .\xproc3 XPROC3-SMOKETEST.xpl
 ```
 
 invokes the script `run-morgana.bat`
@@ -40,7 +58,7 @@ invokes the script `run-morgana.bat`
 On Linux
 
 ```
-> ./xproc3.sh XPROC3-SMOKETEST.xp3
+> ./xproc3.sh XPROC3-SMOKETEST.xpl
 ```
 
 Either script should run the Morgana XProc 3 engine to produce a pretty XML file.
@@ -52,26 +70,26 @@ If a script errors, check its paths and settings (are they up to date with what 
 Those who prefer mouse swipes to command lines can run an XProc 3 pipeline using the Windows GUI:
 
 - Use the file explorer to display an icon for your files including `xproc3.bat` (such as with View icons or View Tiles)
-- Drag an icon for any pipeline `ALLCAPS.xp3` onto the `xproc3.bat` icon to run the pipeline.
+- Drag an icon for any pipeline `ALLCAPS.xpl` onto the `xproc3.bat` icon to run the pipeline.
 - You can create a shortcut to the batch file on the Desktop or elsewhere, and use it the same way
 
-The naming convention `ALLCAPS.xp3` is used in this project for XProc 3 pipeline files that are designed to run standalone in place, with no external ports or special runtime configuration. (These may work by calling other XProc files that are not so insulated.) Since invoking these is simple it is also easy to instrument.
+The naming convention `ALLCAPS.xpl` is used in this project for XProc 3 pipeline files that are designed to run standalone in place, with no external ports or special runtime configuration. (These may work by calling other XProc files that are not so insulated.) Since invoking these is simple it is also easy to instrument.
 
 TODO: see to it that this works also with `xproc3.sh` on GUIs with `bash` support.
 
 ### Download OSCAL resources
 
-OSCAL catalog converter XSLTs and schemas can be copied onto the local system for secure use by running the pipeline `GRAB-OSCAL.xp3`.
+OSCAL catalog converter XSLTs and schemas can be copied onto the local system for secure use by running the pipeline `GRAB-OSCAL.xpl`.
 
 It places these resources in folders inside `lib`. We leave it to you to run these to ensure things are kept up to date and aligned with expectations as to versions, etc.
 
 ### Run the XSD field tests
 
-Use the pipeline, Luke! The pipeline `PROVE-XSD-VALIDATIONS.xp3` runs an XSD field test on each of the documents named in the pipeline.
+Use the pipeline, Luke! The pipeline `PROVE-XSD-VALIDATIONS.xpl` runs an XSD field test on each of the documents named in the pipeline.
 
 ### Run the JSON validator field tests
 
- The pipeline `PROVE-JSON-VALIDATIONS.xp3` runs a JSON Schema field test on each of the documents named in it.
+ The pipeline `PROVE-JSON-VALIDATIONS.xpl` runs a JSON Schema field test on each of the documents named in it.
 
 ### Inspect and assess the test samples
 
@@ -89,7 +107,7 @@ TODO: XSpec the core bits of logic here to externalize things a bit better.
 
 #### Converting valid samples
 
-The XProc pipeline `CONVERT-XML-REFERENCE-SET.xp3` can be used to convert all XML files named in the pipeline into JSON equivalents.
+The XProc pipeline `CONVERT-XML-REFERENCE-SET.xpl` can be used to convert all XML files named in the pipeline into JSON equivalents.
 
 Currently the assumption is that these are always VALID OSCAL XML CATALOG instances. Other types of files require other converters.
 
@@ -131,7 +149,9 @@ We have to maintain all categories in both XML and JSON formats, to begin (possi
 
 A small but pervasive problem in JSON Schema modeling provides us an opportunity to use this scaffolding (Issue metaschema-xslt #105).
 
-## Setup and refresh
+## Very detailed
+
+For a step-by-step, skip back up. Read this through for a more complete picture.
 
 ### Set up Morgana XProc III
 
@@ -151,33 +171,25 @@ The authors and contributors to Saxon and Morgana starting with Michael Kay (Sax
 
 ### Refresh OSCAL schemas and converters
 
-As noted, OSCAL catalog converter XSLTs and schemas can be copied onto the local system for secure use by running the pipeline `GRAB-OSCAL.xp3`. Unless you have made adjustments to your pipelines to relax their dependencies, regard this as a prerequisite for running them.
+As noted, OSCAL catalog converter XSLTs and schemas can be copied onto the local system for secure use by running the pipeline `GRAB-OSCAL.xpl`. Unless you have made adjustments to your pipelines to relax their dependencies (to point to other locations), regard this as a prerequisite for running them.
 
 ### Configuration
 
-By and large, the runtimes work by invoking an XML pipelining engine (Calabash or Morgana) or transformation engine (Saxon). These expect specified inputs to be in place, typically as defined by the pipeline step definition - i.e. the XProc (\*.xpr or \*.xp3) or XSLT (\*.xsl) named in the script.
+The distribution is currently wired to a specific release of Morgana. as [noted in TESTING](TESTING).
 
-For example [tbd]
+Apart from the initial installation, runtime configurations are internalized in the form of XProc 3 pipelines. Updating the configuration will generally mean updating one of the pipelines.
 
-Pointers for schemas (XSD or JSON Schema)
-
-Pointers for documents
+However, in running, testing and extending this application we suggest you also copy and modify the pipelines for greater assurance and freedom.
 
 ### Runtimes
 
-`bash` and Windows scripts invoke processes in Maven or Java
+We aim to provide both `bash` and Windows `*.bat` for the bare Morgana runtime from command line or (see above) GUI interface.
 
-They deliver results to the console, and may also write files to the system.
+While these deliver results to the console, they may also write files to the system.
 
-`xsd-fieldtest.sh` - `xsd-fieldtest.bat` - invoke Maven to run tests on provided XSD Schema, testing it on XML reference set
-`jsv7-fieldtest.sh` - `jsv7-fieldtest.bat` - invoke Maven to run tests on provided JSON Schema (v7), testing it on JSON reference set
+## Testing
 
-#### Utilities
-
-(tbd)
-
-`xml-to-json.sh` convert an OSCAL XML Catalog into JSON
-`json-to-xml.sh` convert an OSCAL JSON Catalog into XML
+See [](TESTING)
 
 ## Resources
 
@@ -196,7 +208,7 @@ The architecture and configuration are intended to be appropriated and embedded 
    - For testing an implementation of Metaschema constraints, we detect all three categories
 - `src` XSLT and XProc code supporting runtimes
   - `\*.xpr` signifies XProc 1.0 (for XML Calabash)
-  - `\*.xp3` signifies XProc 3.0 (for Morgana XProc III)
+  - `\*.xpl` signifies XProc 3.0 (for Morgana XProc III)
 
 ## Goals
 
@@ -215,7 +227,10 @@ We have longer term goals also, but some of this work must be postponed.
 To support generalizing the approach, an interface language for validation error reporting must be designed and deployed. This is not part of the current scope of work, but should be planned (in the [Metaschema]() context, not OSCAL context). Until then, each new validation engine must be provided with its own testing harness.
 
 
+
 ## TODO
+
+[TODO: UPDATE]
 
 Morgana installation
   .sh executing curl

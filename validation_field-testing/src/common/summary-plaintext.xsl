@@ -15,8 +15,8 @@
    </xsl:template>
    
    <xsl:template match="summary[starts-with(.,'ALL GOOD')]" priority="2">
+      <xsl:text>&#xA;{ ((1 to count(../finding)) ! 'GOOD') => string-join('') }</xsl:text>
       <xsl:next-match/>
-      <xsl:text>&#xA;{ ((1 to 36) ! 'GO') => string-join('') }</xsl:text>
    </xsl:template>
    
    <xsl:template match="REPORT/*">
