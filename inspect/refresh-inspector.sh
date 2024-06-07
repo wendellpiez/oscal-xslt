@@ -40,7 +40,7 @@ if [ "$1" = 'catalog' ]
 
 then
 
-  echo Refreshing oscal-$MODULE_inspector.xsl ...
+  echo Refreshing oscal-${MODULE}_inspector.xsl ...
   invoke_calabash "${CALABASH_ARGS}"
   ECHO ... Done
   
