@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="ssp-author.css"?>
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0"
+                      uuid="067c2506-cab7-4ce2-9de0-8dd47d46ab9c">
+   <metadata>
+      <title>Mockup System Security Plan (SSP)</title>
+      <published>2021-11-09T14:00:12.875-05:00</published>
+      <last-modified>2021-11-09T14:00:12.875-05:00</last-modified>
+      <version>string</version>
+      <oscal-version>string</oscal-version>
+      <revisions>
+         <revision>
+            <title>Text and (inline) markup</title>
+            <published>2021-11-09T14:00:12.875-05:00</published>
+            <last-modified>2021-11-09T14:00:12.875-05:00</last-modified>
+            <version>string</version>
+            <oscal-version>string</oscal-version>
+            <prop name="someproperty"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="someclass">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </revision>
+      </revisions>
+      <document-id scheme="protocol:uri">string</document-id>
+      <prop name="token"
+            value="string"
+            uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+            ns="protocol:uri"
+            class="token">
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </prop>
+      <link href="uri-reference" media-type="string" rel="token">
+         <text>Text and (inline) markup</text>
+      </link>
+      <role id="token">
+         <title>Text and (inline) markup</title>
+         <short-name>string</short-name>
+         <description>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </description>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </role>
+      <location uuid="336386c6-13b9-4b70-8742-39fd795c9fb1">
+         <title>Text and (inline) markup</title>
+         <address type="token">
+            <addr-line>string</addr-line>
+            <city>string</city>
+            <state>string</state>
+            <postal-code>string</postal-code>
+            <country>string</country>
+         </address>
+         <email-address>receiver@email.org</email-address>
+         <telephone-number type="string">string</telephone-number>
+         <url>protocol:uri</url>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </location>
+      <party uuid="7ee5523e-1b43-41db-85a9-b0c2d15a5487" type="string">
+         <name>string</name>
+         <short-name>string</short-name>
+         <external-id scheme="protocol:uri">string</external-id>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <email-address>receiver@email.org</email-address>
+         <telephone-number type="string">string</telephone-number>
+         <address type="token">
+            <addr-line>string</addr-line>
+            <city>string</city>
+            <state>string</state>
+            <postal-code>string</postal-code>
+            <country>string</country>
+         </address>
+         <!-- <location-uuid/> -->
+         <member-of-organization>c1719f3d-e554-4eb7-841d-d1fff590fef2</member-of-organization>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </party>
+      <responsible-party role-id="token">
+         <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </responsible-party>
+      <remarks>
+         <p>Paragraphs and (block-level) markup contents.</p>
+      </remarks>
+   </metadata>
+   <import-profile href="uri-reference">
+      <remarks>
+         <p>Paragraphs and (block-level) markup contents.</p>
+      </remarks>
+   </import-profile>
+   <system-characteristics>
+      <system-id identifier-type="protocol:uri">system_identifier</system-id>
+      <system-name>Mockup System</system-name>
+      <system-name-short>mkp</system-name-short>
+      <description>
+         <p>The Mockup System does not actually exist: it is purely notional.</p>
+      </description>
+      <prop name="token"
+            value="string"
+            uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+            ns="protocol:uri"
+            class="token">
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </prop>
+      <link href="abc" media-type="media-type" rel="related">
+         <text>Link to target text</text>
+      </link>
+      <link href="xyz" media-type="media-type" rel="related"/>
+      <date-authorized>2021-11-09-05:00</date-authorized>
+      <security-sensitivity-level>string</security-sensitivity-level>
+      <system-information>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <information-type uuid="73a693c2-0d2f-47ae-b20b-c532eb6d1d79">
+            <title>Text and (inline) markup</title>
+            <description>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </description>
+            <categorization system="protocol:uri">
+               <information-type-id>string</information-type-id>
+            </categorization>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <confidentiality-impact>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <base>string</base>
+               <selected>string</selected>
+               <adjustment-justification>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </adjustment-justification>
+            </confidentiality-impact>
+            <integrity-impact>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <base>string</base>
+               <selected>string</selected>
+               <adjustment-justification>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </adjustment-justification>
+            </integrity-impact>
+            <availability-impact>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <base>string</base>
+               <selected>string</selected>
+               <adjustment-justification>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </adjustment-justification>
+            </availability-impact>
+         </information-type>
+      </system-information>
+      <security-impact-level>
+         <security-objective-confidentiality>string</security-objective-confidentiality>
+         <security-objective-integrity>string</security-objective-integrity>
+         <security-objective-availability>string</security-objective-availability>
+      </security-impact-level>
+      <status state="string">
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </status>
+      <authorization-boundary>
+         <description>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </description>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <diagram uuid="ace2a18e-afb0-4bc7-a41b-e7f2a25e95e7">
+            <description>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </description>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <caption>Text and (inline) markup</caption>
+            <remarks>
+               <p>Diagrams also with remarks.</p>
+            </remarks>
+         </diagram>
+         <remarks>
+            <p>Remarks to Authorization Boundary.</p>
+         </remarks>
+      </authorization-boundary>
+      <network-architecture>
+         <description>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </description>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <diagram uuid="ace2a18e-afb0-4bc7-a41b-e7f2a25e95e7">
+            <description>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </description>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <caption>Text and (inline) markup</caption>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </diagram>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </network-architecture>
+      <data-flow>
+         <description>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </description>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <diagram uuid="ace2a18e-afb0-4bc7-a41b-e7f2a25e95e7">
+            <description>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </description>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <caption>Text and (inline) markup</caption>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </diagram>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </data-flow>
+      <responsible-party role-id="token">
+         <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </responsible-party>
+      <remarks>
+         <p>Paragraphs and (block-level) markup contents.</p>
+      </remarks>
+   </system-characteristics>
+   <system-implementation>
+      <prop name="token"
+            value="string"
+            uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+            ns="protocol:uri"
+            class="token">
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </prop>
+      <link href="uri-reference" media-type="string" rel="token">
+         <text>Text and (inline) markup</text>
+      </link>
+      <leveraged-authorization uuid="f76760e3-9590-4685-b653-941900eb73fb">
+         <title>Text and (inline) markup</title>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <party-uuid>fbb4ac48-ae02-44ca-b3d7-7812249c8f51</party-uuid>
+         <date-authorized>2021-11-09-05:00</date-authorized>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </leveraged-authorization>
+      <user uuid="796f5963-02e5-40ee-b1fa-bfbe586df860">
+         <title>System Administrator</title>
+         <short-name>admin</short-name>
+         <description>
+            <p>Description of Administrator user.</p>
+         </description>
+         <prop name="permissions"
+               value="all"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri">
+            <remarks>
+               <p>Remarks on 'permissions' property.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Title of a link</text>
+         </link>
+         <role-id>role-id-value</role-id>
+         <authorized-privilege>
+            <title>Text and (inline) markup</title>
+            <description>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </description>
+            <function-performed>string</function-performed>
+         </authorized-privilege>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </user>
+      <component uuid="1fa6fbc1-facc-41e3-9e98-d1be2355b972" type="string">
+         <title>Text and (inline) markup</title>
+         <description>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </description>
+         <purpose>Text and (inline) markup</purpose>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <status state="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </status>
+         <responsible-role role-id="token">
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </responsible-role>
+         <protocol name="string" uuid="003fc939-90fa-4d71-afea-3d975b57c776">
+            <title>Text and (inline) markup</title>
+            <port-range start="0" end="0" transport="token"/>
+         </protocol>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </component>
+      <inventory-item uuid="23a6941e-0507-40e3-a702-9cc39529eb76">
+         <description>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </description>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <responsible-party role-id="token">
+            <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </responsible-party>
+         <implemented-component component-uuid="1fa6fbc1-facc-41e3-9e98-d1be2355b972">
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <responsible-party role-id="token">
+               <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </responsible-party>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </implemented-component>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </inventory-item>
+      <remarks>
+         <p>Paragraphs and (block-level) markup contents.</p>
+      </remarks>
+   </system-implementation>
+   <control-implementation>
+      <description>
+         <p>Paragraphs and (block-level) markup contents.</p>
+      </description>
+      <set-parameter param-id="p1">
+         <value>param p1 value</value>
+      </set-parameter>
+      <implemented-requirement uuid="6894a7e7-110c-4fe3-93db-6e8cd10f1431" control-id="token">
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <link href="uri-reference" media-type="string" rel="token">
+            <text>Text and (inline) markup</text>
+         </link>
+         <set-parameter param-id="p2">
+            <value>param p2 value</value>
+         </set-parameter>
+         <responsible-role role-id="token">
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </responsible-role>
+         <statement statement-id="token" uuid="35f6828f-1d4d-4972-ae20-b7db46d60ed7">
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <responsible-role role-id="token">
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </responsible-role>
+            <by-component component-uuid="2966503e-187a-4657-8c07-f1d254e2d5c0"
+                          uuid="24ba602b-baef-444b-8e94-d238a1950002">
+               <description>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </description>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <set-parameter param-id="token">
+                  <value>string</value>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </set-parameter>
+               <implementation-status state="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </implementation-status>
+               <export>
+                  <description>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </description>
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <provided uuid="5937a0fa-b42c-42f2-857e-bf7d8532643e">
+                     <description>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </description>
+                     <prop name="token"
+                           value="string"
+                           uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                           ns="protocol:uri"
+                           class="token">
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </prop>
+                     <link href="uri-reference" media-type="string" rel="token">
+                        <text>Text and (inline) markup</text>
+                     </link>
+                     <responsible-role role-id="token">
+                        <prop name="token"
+                              value="string"
+                              uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                              ns="protocol:uri"
+                              class="token">
+                           <remarks>
+                              <p>Paragraphs and (block-level) markup contents.</p>
+                           </remarks>
+                        </prop>
+                        <link href="uri-reference" media-type="string" rel="token">
+                           <text>Text and (inline) markup</text>
+                        </link>
+                        <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </responsible-role>
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </provided>
+                  <responsibility uuid="2a9c650d-d4b3-46c2-a4f8-0038812b2e5b"
+                                  provided-uuid="cde49de4-fbbe-43c0-9475-87b2c5bf387a">
+                     <description>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </description>
+                     <prop name="token"
+                           value="string"
+                           uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                           ns="protocol:uri"
+                           class="token">
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </prop>
+                     <link href="uri-reference" media-type="string" rel="token">
+                        <text>Text and (inline) markup</text>
+                     </link>
+                     <responsible-role role-id="token">
+                        <prop name="token"
+                              value="string"
+                              uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                              ns="protocol:uri"
+                              class="token">
+                           <remarks>
+                              <p>Paragraphs and (block-level) markup contents.</p>
+                           </remarks>
+                        </prop>
+                        <link href="uri-reference" media-type="string" rel="token">
+                           <text>Text and (inline) markup</text>
+                        </link>
+                        <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </responsible-role>
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </responsibility>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </export>
+               <inherited uuid="f8d10777-0cbe-4e3d-a994-8503fe22085a"
+                          provided-uuid="cde49de4-fbbe-43c0-9475-87b2c5bf387a">
+                  <description>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </description>
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <responsible-role role-id="token">
+                     <prop name="token"
+                           value="string"
+                           uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                           ns="protocol:uri"
+                           class="token">
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </prop>
+                     <link href="uri-reference" media-type="string" rel="token">
+                        <text>Text and (inline) markup</text>
+                     </link>
+                     <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </responsible-role>
+               </inherited>
+               <satisfied uuid="b22dc647-5913-4164-8811-781d08fdb6a2"
+                          responsibility-uuid="0ab6171f-0b97-43e5-a22d-68552822096e">
+                  <description>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </description>
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <responsible-role role-id="token">
+                     <prop name="token"
+                           value="string"
+                           uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                           ns="protocol:uri"
+                           class="token">
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </prop>
+                     <link href="uri-reference" media-type="string" rel="token">
+                        <text>Text and (inline) markup</text>
+                     </link>
+                     <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </responsible-role>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </satisfied>
+               <responsible-role role-id="token">
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </responsible-role>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </by-component>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </statement>
+         <by-component component-uuid="2966503e-187a-4657-8c07-f1d254e2d5c0"
+                       uuid="24ba602b-baef-444b-8e94-d238a1950002">
+            <description>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </description>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="string" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+            <set-parameter param-id="token">
+               <value>string</value>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </set-parameter>
+            <implementation-status state="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </implementation-status>
+            <export>
+               <description>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </description>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <provided uuid="5937a0fa-b42c-42f2-857e-bf7d8532643e">
+                  <description>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </description>
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <responsible-role role-id="token">
+                     <prop name="token"
+                           value="string"
+                           uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                           ns="protocol:uri"
+                           class="token">
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </prop>
+                     <link href="uri-reference" media-type="string" rel="token">
+                        <text>Text and (inline) markup</text>
+                     </link>
+                     <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </responsible-role>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </provided>
+               <responsibility uuid="2a9c650d-d4b3-46c2-a4f8-0038812b2e5b"
+                               provided-uuid="cde49de4-fbbe-43c0-9475-87b2c5bf387a">
+                  <description>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </description>
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <responsible-role role-id="token">
+                     <prop name="token"
+                           value="string"
+                           uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                           ns="protocol:uri"
+                           class="token">
+                        <remarks>
+                           <p>Paragraphs and (block-level) markup contents.</p>
+                        </remarks>
+                     </prop>
+                     <link href="uri-reference" media-type="string" rel="token">
+                        <text>Text and (inline) markup</text>
+                     </link>
+                     <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </responsible-role>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </responsibility>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </export>
+            <inherited uuid="f8d10777-0cbe-4e3d-a994-8503fe22085a"
+                       provided-uuid="cde49de4-fbbe-43c0-9475-87b2c5bf387a">
+               <description>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </description>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <responsible-role role-id="token">
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </responsible-role>
+            </inherited>
+            <satisfied uuid="b22dc647-5913-4164-8811-781d08fdb6a2"
+                       responsibility-uuid="0ab6171f-0b97-43e5-a22d-68552822096e">
+               <description>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </description>
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <responsible-role role-id="token">
+                  <prop name="token"
+                        value="string"
+                        uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                        ns="protocol:uri"
+                        class="token">
+                     <remarks>
+                        <p>Paragraphs and (block-level) markup contents.</p>
+                     </remarks>
+                  </prop>
+                  <link href="uri-reference" media-type="string" rel="token">
+                     <text>Text and (inline) markup</text>
+                  </link>
+                  <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </responsible-role>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </satisfied>
+            <responsible-role role-id="token">
+               <prop name="token"
+                     value="string"
+                     uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                     ns="protocol:uri"
+                     class="token">
+                  <remarks>
+                     <p>Paragraphs and (block-level) markup contents.</p>
+                  </remarks>
+               </prop>
+               <link href="uri-reference" media-type="string" rel="token">
+                  <text>Text and (inline) markup</text>
+               </link>
+               <party-uuid>81d04c30-66e0-4b95-9799-e58f643c0aaa</party-uuid>
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </responsible-role>
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </by-component>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </implemented-requirement>
+   </control-implementation>
+   <back-matter>
+      <resource uuid="3cdf5d3a-2c90-4dad-864f-a37c5ad1b79a">
+         <title>Resource title</title>
+         <description>
+            <p>Description of the resource goes here.</p>
+         </description>
+         <prop name="token"
+               value="string"
+               uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+               ns="protocol:uri"
+               class="token">
+            <remarks>
+               <p>Paragraphs and (block-level) markup contents.</p>
+            </remarks>
+         </prop>
+         <document-id scheme="protocol:uri">string</document-id>
+         <citation>
+            <text>Text and (inline) markup</text>
+            <prop name="token"
+                  value="string"
+                  uuid="d77200a6-e2c9-450c-be6c-7e4d97057ce1"
+                  ns="protocol:uri"
+                  class="token">
+               <remarks>
+                  <p>Paragraphs and (block-level) markup contents.</p>
+               </remarks>
+            </prop>
+            <link href="uri-reference" media-type="text/css" rel="token">
+               <text>Text and (inline) markup</text>
+            </link>
+         </citation>
+         <rlink href="uri-reference" media-type="string">
+            <hash algorithm="string">string</hash>
+         </rlink>
+         <base64 media-type="string" filename="uri-reference">base64Binary</base64>
+         <remarks>
+            <p>Paragraphs and (block-level) markup contents.</p>
+         </remarks>
+      </resource>
+   </back-matter>
+</system-security-plan>

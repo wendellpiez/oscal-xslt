@@ -1,0 +1,215 @@
+
+* { display: block }
+
+insert, b, i, a, strong, emph, code { display: inline }
+
+system-security-plan > * { -oxy-foldable: true;
+  margin-top: 1em }
+
+metadata { font-family: sans-serif }
+
+title { font-size: 140% }
+
+
+metadata *:before,
+metadata *:after  { font-weight: bold; font-size: 85% }
+
+version:before { content: "version: " }
+
+oscal-version:before { content: "oscal version: "}
+
+last-modified:before { content: "last modified: "}
+last-modified:after { content: " (" oxy_xpath( 
+         "format-dateTime(.,'[MNn,3-3] [D] [Y]')") ")"  
+ }
+
+
+published:before { content: "published: "}
+published:after { content: " (" oxy_xpath( 
+         "format-dateTime(.,'[MNn,3-3] [D] [Y]')") ")"  
+ }
+
+revisions { }
+
+revision, role, location, party { font-size: 80%; margin-left: 2em }
+
+role:before { content: "Role: " }
+
+location:before { content: "Location: " }
+
+party:before { content: "Party: " }
+
+prop:before { content: attr(name) ": " attr(value) }
+
+remarks { font-size: 80%; margin-left: 2em; font-style: italic }
+
+
+
+
+
+addr-line { }
+
+address { }
+
+adjustment-justification { }
+
+authorization-boundary { }
+
+authorized-privilege { }
+
+availability-impact { }
+
+back-matter { }
+
+base64 { }
+
+base { }
+
+by-component { }
+
+caption { }
+
+categorization { }
+
+citation { }
+
+city { }
+
+component { }
+
+confidentiality-impact { }
+
+control-implementation { }
+
+country { }
+
+data-flow { }
+
+date-authorized { }
+
+description { }
+
+diagram { }
+
+document-id { }
+
+email-address { }
+
+export { }
+
+external-id { }
+
+function-performed { }
+
+hash { }
+
+implementation-status { }
+
+implemented-component { }
+
+implemented-requirement { }
+
+import-profile { }
+
+information-type-id { }
+
+information-type { }
+
+inherited { }
+
+integrity-impact { }
+
+inventory-item { }
+
+leveraged-authorization { }
+
+link { }
+
+location { }
+
+member-of-organization { }
+
+name { }
+
+network-architecture { }
+
+p { }
+
+party-uuid { }
+
+party { }
+
+port-range { }
+
+postal-code { }
+
+prop { }
+
+protocol { }
+
+provided { }
+
+purpose { }
+
+remarks { }
+
+resource { }
+
+responsibility { }
+
+responsible-party { }
+
+responsible-role { }
+rlink { }
+
+role-id { }
+
+role { }
+
+satisfied { }
+
+security-impact-level { }
+
+security-objective-availability { }
+
+security-objective-confidentiality { }
+
+security-objective-integrity { }
+
+security-sensitivity-level { }
+
+selected { }
+
+set-parameter { }
+
+short-name { }
+
+state { }
+
+statement { }
+
+status { }
+
+system-characteristics { }
+
+system-id { }
+
+system-implementation { }
+
+system-information { }
+
+system-name-short { }
+
+system-name { }
+
+system-security-plan { }
+
+telephone-number { }
+
+text { }
+
+url { }
+
+user { }
+
+value { }
